@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajay Badugu | AIML & Full-Stack Developer Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'zinc-950': '#0c0c0c',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 backdrop-blur-md bg-zinc-900/80 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#hero" class="text-2xl font-bold text-gradient from-purple-400 to-pink-500">
+          Ajay Badugu
+        </a>
+        <div id="nav-menu" class="hidden md:flex space-x-6"></div>
+        <button id="nav-toggle"
+          class="md:hidden text-gray-300 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400 p-2 rounded-md transition duration-300">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3"></div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="flex flex-col items-center justify-center min-h-screen pt-24 text-center bg-zinc-900 relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-gradient"></div>
+      <div class="relative z-10 max-w-4xl px-4">
+        <p class="text-lg text-purple-300 mb-4 font-medium">Welcome To My Portfolio</p>
+        <h1 class="text-6xl sm:text-8xl font-extrabold text-white mb-4">
+          Hello, I'm <span class="text-gradient from-purple-400 to-pink-500">Ajay.</span>
+        </h1>
+        <h2 id="hero-role" class="text-2xl sm:text-3xl text-zinc-300 font-light mb-8"></h2>
+        <p id="hero-summary" class="text-lg text-zinc-400 mb-10 max-w-3xl mx-auto"></p>
+
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a id="hero-contact-btn" href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-container">
+      <h2 class="section-title">About Me</h2>
+      <div class="grid md:grid-cols-3 gap-12 items-center">
+        <div class="md:col-span-2">
+          <h3 class="text-3xl font-bold text-gray-100 mb-4">A Dual-Focus Developer Eager to Innovate</h3>
+          <p id="about-summary-main" class="text-zinc-300 mb-6 leading-relaxed"></p>
+          <p class="text-zinc-400 italic">My journey is fueled by a passion for creating high-impact solutions...</p>
+          <div id="about-contact-links" class="mt-8 flex flex-wrap gap-4"></div>
+        </div>
+        <div id="about-stats" class="md:col-span-1 bg-zinc-800 p-6 rounded-xl shadow-lg border border-zinc-700"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section-container">
+      <h2 class="section-title">My Technical Stack</h2>
+      <div id="skills-grid" class="flex flex-wrap justify-center gap-6"></div>
+      <div id="certifications-achievements" class="mt-12 text-center"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-container">
+      <h2 class="section-title">Portfolio Showcase</h2>
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section-container max-w-4xl mx-auto">
+      <h2 class="section-title">Education & Experience</h2>
+      <div id="timeline-container" class="relative"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-container max-w-7xl mx-auto">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div id="contact-info" class="space-y-6"></div>
+        <div class="bg-zinc-800 p-8 rounded-xl shadow-2xl border border-zinc-700">
+          <h3 class="text-2xl font-bold text-gray-100 mb-6">Send Me a Message</h3>
+          <form id="contact-form" class="space-y-4">
+            <input type="text" placeholder="Your Name" class="input-field" required />
+            <input type="email" placeholder="Your Email" class="input-field" required />
+            <textarea placeholder="Your Message" rows="5" class="input-field" required></textarea>
+            <button type="submit" class="btn-primary w-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="bg-zinc-900 border-t border-zinc-800 py-6 text-center text-zinc-500 text-sm">
+    &copy; <span id="current-year"></span> Ajay Badugu. All rights reserved. | Built with HTML, JS, and Tailwind CSS.
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
