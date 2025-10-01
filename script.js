@@ -96,8 +96,14 @@ const projects = [
     title: "Portfolio Website",
     desc: "This responsive portfolio built with HTML, Tailwind CSS, and JavaScript.",
     link: "https://ajaybadugu.github.io/ajay-portfolio/"
+  },
+  {
+    title: "Music Recommendation System",
+    desc: "Deep Neural Network model that recommends songs based on Spotify audio features (danceability, energy, tempo, etc.). Built with TensorFlow/Keras and Scikit-learn, including feature engineering, model tuning, and visualizations.",
+    link: "https://github.com/AJAYBADUGU/Music-Recommendation-System"
   }
 ];
+
 
 document.getElementById("projects-grid").innerHTML =
   projects.map(p => `
@@ -154,3 +160,4 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
 
 // ========== ICONS ==========
 lucide.createIcons();
+
